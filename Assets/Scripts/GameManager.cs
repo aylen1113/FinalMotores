@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     {
       
             SceneManager.LoadScene("Victory");
-            Time.timeScale = 0f;
+         
         
     }
 

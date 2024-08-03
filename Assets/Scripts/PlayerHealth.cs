@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("game over");
             SceneManager.LoadScene("GameOver");
-            Time.timeScale = 0f;
+
 
         }
     }
