@@ -3,17 +3,24 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // This method loads the game scene.
-    public void PlayGame()
-    {
+    //public GameObject victoryCanvas;
+    //public GameObject gameOverCanvas;
 
-        SceneManager.LoadScene("Game");
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
     }
 
+    public void PlayGame()
+    {
+    
+        SceneManager.LoadScene("Game"); 
+    }
 
     public void QuitGame()
     {
-   
         Application.Quit();
+        Time.timeScale = 1f;
     }
 }

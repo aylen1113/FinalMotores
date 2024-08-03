@@ -31,7 +31,7 @@ public class EnemyControl : MonoBehaviour
         Anim = GetComponent<Animator>();
 
         Anim.SetBool("attack", false);
-
+        Anim.SetBool("dissolve", false);
     }
 
     // Update is called once per frame
@@ -96,6 +96,13 @@ public class EnemyControl : MonoBehaviour
 
     private void Disappear()
     {
+        Anim.SetBool("dissolve", true);
+        StartCoroutine(WaitForDissolve());
+    }
+
+    private IEnumerator WaitForDissolve()
+    {
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
         gameManager.EnemyKilled();
     }

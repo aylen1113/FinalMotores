@@ -1,20 +1,18 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public int enemyKillCount = 0;
     public int totalEnemies = 10;
     private int enemiesLeft;
-    public GameObject victoryCanvas;
+    //public GameObject victoryCanvas;
     public TextMeshProUGUI enemiesLefttext;
     void Start()
     {
         enemiesLeft = totalEnemies;
-        if (victoryCanvas != null)
-        {
-            victoryCanvas.SetActive(false);
-        }
+     
         UpdateKillCountText();
     }
 
@@ -31,11 +29,10 @@ public class GameManager : MonoBehaviour
 
     void ShowVictoryCanvas()
     {
-        if (victoryCanvas != null)
-        {
-            victoryCanvas.SetActive(true);
-
-        }
+      
+            SceneManager.LoadScene("Victory");
+            Time.timeScale = 0f;
+        
     }
 
     void UpdateKillCountText()
