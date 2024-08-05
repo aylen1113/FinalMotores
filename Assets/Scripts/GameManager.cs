@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
         UpdateKillCountText();
     }
 
-    // Call this method when an enemy is killed
+
     public void EnemyKilled()
     {
         enemiesLeft--;

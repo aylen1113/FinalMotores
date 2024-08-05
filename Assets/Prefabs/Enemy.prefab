@@ -146,7 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 5
+  speed: 8
+  stopDistance: 20
   playerHealth: {fileID: 0}
   damageAmount: 10
 --- !u!54 &2456516763557090422

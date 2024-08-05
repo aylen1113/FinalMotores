@@ -17,14 +17,14 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        // Handle movement
+        // movimiento
         float moveForwardBackward = Input.GetAxis("Vertical") * movementSpeed;
         float moveSideways = Input.GetAxis("Horizontal") * movementSpeed;
         moveForwardBackward *= Time.deltaTime;
         moveSideways *= Time.deltaTime;
         transform.Translate(moveSideways, 0, moveForwardBackward);
 
-        // Handle camera rotation
+        // rotacion de camara
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -34,7 +34,7 @@ public class PlayerControl : MonoBehaviour
         firstPersonCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
 
-        // Unlock the cursor if the Escape key is pressed
+    
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.None;

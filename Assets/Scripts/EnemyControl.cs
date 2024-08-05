@@ -18,8 +18,7 @@ public class EnemyControl : MonoBehaviour
     private GameManager gameManager;
     private Animator Anim;
 
-    //bool GhostRun = false;
-    //bool GhostAttack = false;
+  
 
 
     void Start()
